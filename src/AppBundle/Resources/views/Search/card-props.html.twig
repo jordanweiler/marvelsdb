@@ -23,7 +23,7 @@
 <div class="card-props">
   {% trans %}Cost{% endtrans %}: {{ macros.format_integer(card.cost) }}.
 	<div>
-		{% trans %}Threat{% endtrans %}: {{ macros.format_integer(card.base_threat, null, not card.base_threat_fixed and not card.base_threat_per_group, card.base_threat_per_group) }}.
+		{% trans %}Threat{% endtrans %}: {{ macros.format_integer(card.base_threat, card.base_threat_star, not card.base_threat_fixed and not card.base_threat_per_group, card.base_threat_per_group) }}.
 	</div>
 </div>
 {% endif %}
@@ -56,7 +56,7 @@
 	{% endif %}
 {% elseif card.type_code == 'side_scheme' %}
 	<div>
-	{% trans %}Starting Threat{% endtrans %}: {{ macros.format_integer(card.base_threat, null, not card.base_threat_fixed and not card.base_threat_per_group, card.base_threat_per_group) }}.
+	{% trans %}Starting Threat{% endtrans %}: {{ macros.format_integer(card.base_threat, card.base_threat_star, not card.base_threat_fixed and not card.base_threat_per_group, card.base_threat_per_group) }}.
 	{% if card.escalation_threat %}
 		{% trans %}Escalation Threat{% endtrans %}: {{ macros.format_integer(card.escalation_threat, card.escalation_threat_star, not card.escalation_threat_fixed) }}.
 	{% endif %}
@@ -64,7 +64,7 @@
 {% elseif card.type_code == 'main_scheme' %}
 	{% if card.linked_card is not defined %}
 	<div>
-	{% trans %}Starting Threat{% endtrans %}: {{ macros.format_integer(card.base_threat, null, not card.base_threat_fixed and not card.base_threat_per_group, card.base_threat_per_group) }}.
+	{% trans %}Starting Threat{% endtrans %}: {{ macros.format_integer(card.base_threat, card.base_threat_star, not card.base_threat_fixed and not card.base_threat_per_group, card.base_threat_per_group) }}.
 	{% if card.escalation_threat %}
 		{% trans %}Escalation Threat{% endtrans %}: {{ macros.format_integer(card.escalation_threat, card.escalation_threat_star, not card.escalation_threat_fixed) }}.
 	{% endif %}

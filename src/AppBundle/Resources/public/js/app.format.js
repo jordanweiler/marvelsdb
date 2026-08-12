@@ -107,7 +107,7 @@ format.info = function info(card) {
 	switch(card.type_code) {
 		case 'side_scheme':
 		case 'main_scheme':
-			text += '<div>Starting Threat: ' + format.fancy_int(card.base_threat, null, !card.base_threat_fixed && !card.base_threat_per_group, card.base_threat_per_group) + '.';
+			text += '<div>Starting Threat: ' + format.fancy_int(card.base_threat, card.base_threat_star, !card.base_threat_fixed && !card.base_threat_per_group, card.base_threat_per_group) + '.';
 			if (card.type_code == 'main_scheme') {
 				if (card.escalation_threat || card.escalation_threat_star) {
 					text += ' Escalation Threat: ' + format.fancy_int(card.escalation_threat, card.escalation_threat_star, !card.escalation_threat_fixed) + '.</div>';
@@ -156,7 +156,7 @@ format.info = function info(card) {
 				text += '<div>Cost: ' + format.fancy_int(card.cost, card.cost_star, card.cost_per_hero) + '.</div>';
 			}
 			if (card.type_code == 'player_side_scheme') {
-				text += '<div>Threat: ' + format.fancy_int(card.base_threat, null, !card.base_threat_fixed && !card.base_threat_per_group, card.base_threat_per_group) + '.</div>';
+				text += '<div>Threat: ' + format.fancy_int(card.base_threat, card.base_threat_star, !card.base_threat_fixed && !card.base_threat_per_group, card.base_threat_per_group) + '.</div>';
 			}
 			if (card.resource_physical || card.resource_mental || card.resource_energy || card.resource_wild){
 				text += '<div>Resource: ';

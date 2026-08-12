@@ -961,6 +961,7 @@ class ImportStdCommand extends ContainerAwareCommand
 			'base_threat',
 			'base_threat_fixed',
 			'base_threat_per_group',
+			'base_threat_star',
 			'boost',
 			'boost_star',
 			'escalation_threat',
@@ -982,6 +983,7 @@ class ImportStdCommand extends ContainerAwareCommand
 			'base_threat',
 			'base_threat_fixed',
 			'base_threat_per_group',
+			'base_threat_star',
 			'escalation_threat',
 			'escalation_threat_fixed',
 			'escalation_threat_star',
@@ -1012,6 +1014,7 @@ class ImportStdCommand extends ContainerAwareCommand
 		$optionalKeys = [
 			'base_threat_fixed',
 			'base_threat_per_group',
+			'base_threat_star',
 			'scheme_acceleration',
 			'scheme_amplify',
 			'scheme_crisis',
