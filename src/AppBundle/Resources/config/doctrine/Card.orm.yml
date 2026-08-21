@@ -195,6 +195,9 @@ AppBundle\Entity\Card:
         baseThreatPerGroup:
             type: boolean
             nullable: true
+        baseThreatStar:
+            type: boolean
+            nullable: true
         escalationThreat:
             type: smallint
             nullable: true

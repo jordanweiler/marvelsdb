@@ -76,6 +76,7 @@ class Card implements \Gedmo\Translatable\Translatable, \Serializable
 				$mandatoryFields[] = 'base_threat';
 				$optionalFields[] = 'base_threat_fixed';
 				$optionalFields[] = 'base_threat_per_group';
+				$optionalFields[] = 'base_threat_star';
 				$optionalFields[] = 'resource_energy';
 				$optionalFields[] = 'resource_physical';
 				$optionalFields[] = 'resource_mental';
@@ -161,6 +162,7 @@ class Card implements \Gedmo\Translatable\Translatable, \Serializable
 				$optionalFields[] = 'base_threat';
 				$optionalFields[] = 'base_threat_fixed';
 				$optionalFields[] = 'base_threat_per_group';
+				$optionalFields[] = 'base_threat_star';
 				$optionalFields[] = 'boost';
 				$optionalFields[] = 'boost_star';
 				$optionalFields[] = 'escalation_threat';
@@ -176,6 +178,7 @@ class Card implements \Gedmo\Translatable\Translatable, \Serializable
 				$optionalFields[] = 'base_threat';
 				$optionalFields[] = 'base_threat_fixed';
 				$optionalFields[] = 'base_threat_per_group';
+				$optionalFields[] = 'base_threat_star';
 				$optionalFields[] = 'escalation_threat';
 				$optionalFields[] = 'escalation_threat_fixed';
 				$optionalFields[] = 'escalation_threat_star';
@@ -2439,6 +2442,11 @@ class Card implements \Gedmo\Translatable\Translatable, \Serializable
     private $baseThreatPerGroup;
 
     /**
+     * @var boolean
+     */
+    private $baseThreatStar;
+
+    /**
      * @var integer
      */
     private $escalationThreat;
@@ -2544,6 +2552,30 @@ class Card implements \Gedmo\Translatable\Translatable, \Serializable
     public function getBaseThreatPerGroup()
     {
         return $this->baseThreatPerGroup;
+    }
+
+    /**
+     * Set baseThreatStar
+     *
+     * @param boolean $baseThreatStar
+     *
+     * @return Card
+     */
+    public function setBaseThreatStar($baseThreatStar)
+    {
+        $this->baseThreatStar = $baseThreatStar;
+
+        return $this;
+    }
+
+    /**
+     * Get baseThreatStar
+     *
+     * @return boolean
+     */
+    public function getBaseThreatStar()
+    {
+        return $this->baseThreatStar;
     }
 
     /**
